@@ -1,13 +1,14 @@
 import React from "react";
-import { Background } from "../profile/styled";
+import { Container, Logo } from "../profile/styled";
+import LogoSVG from "../../assets/images/LogoSVG.svg"
 
 const Profile = () => {
     return (
-        <>
-            <Background>
-
-            </Background>
-        </>
+   
+        <Container>
+             <Logo src={LogoSVG} alt="teste"/>
+        </Container>
+    
     )
 }
 
