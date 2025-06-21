@@ -1,6 +1,7 @@
 import React from "react";
-import { BotaoThreads, Container,DivFoto,DivNome,DivNomePerfil,Header, Logo, Nome, NomePerfil } from "../profile/styled";
+import { Biografia, BotaoThreads, Container,DivFoto,DivNome,DivNomePerfil,FotoPerfil,Header, Logo, Nome, NomePerfil, TextoBiografia } from "../profile/styled";
 import LogoSVG from "../../assets/images/LogoSVG.svg"
+import Perfil from "../../assets/images/185657175.jpeg"
 
 const Profile = () => {
     return (
@@ -15,11 +16,19 @@ const Profile = () => {
                         <BotaoThreads>threads.net</BotaoThreads>
                     </DivNomePerfil>
                 </DivNome>
-
+                    
                 <DivFoto>
-                    saulo
+                    <FotoPerfil src={Perfil}></FotoPerfil>
                 </DivFoto>
              </Header>
+
+             <Biografia>
+
+                <TextoBiografia>
+                    
+                </TextoBiografia>
+
+             </Biografia>
         </Container>
     
     )

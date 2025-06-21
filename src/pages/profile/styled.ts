@@ -62,7 +62,7 @@ body {
 
 export const Container = styled.div`
     display: flex;
-    width: 700px;
+    width: 600px;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
@@ -85,41 +85,70 @@ export const DivNome = styled.div`
     flex: 1;
     width: 100%;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 `;
 
 export const DivNomePerfil = styled.div`
     display: flex;
     justify-content: flex-start;
+    margin-top: -10px;
 `
 
 export const DivFoto = styled.div`
     display: flex;
     flex: 1;
     width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
 `;
 
 export const Nome = styled.h1`
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-decoration: none;
+    margin: 0;
+    border: 0;
 `
 export const NomePerfil = styled.h2`
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     text-decoration: none;
-    margin-top: -18px;
+    margin: 0;
+    border: 0;
 `
 
 export const BotaoThreads = styled.button`
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px 7px;
+    border-radius: 15px;
     font-family: 'Roboto', sans-serif;
     background-color: #3a3a3a;
     border: 0;
+    color: #616161;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    margin-top: -5px;
+    margin-left: 5px;
+`
+
+export const FotoPerfil = styled.img`
+  border-radius: 50%;
+  width: 100%;
+  max-width: 85px;
+`
+
+export const Biografia = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const TextoBiografia = styled.h3`
+  border: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
 `
