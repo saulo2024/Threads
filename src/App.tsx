@@ -1,11 +1,11 @@
 import React from "react";
-import { GlobalStyles } from "./pages/profile/styled";
+import { GlobalStyle } from "./pages/profile/styled";
 import Profile from "./pages/profile";
 
 function App() {
   return (
     <>
-      <GlobalStyles/>
+      <GlobalStyle/>
       <Profile/>
     </>
       

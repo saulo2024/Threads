@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Logo } from "../profile/styled";
+import { BotaoThreads, Container,DivFoto,DivNome,DivNomePerfil,Header, Logo, Nome, NomePerfil } from "../profile/styled";
 import LogoSVG from "../../assets/images/LogoSVG.svg"
 
 const Profile = () => {
@@ -7,6 +7,19 @@ const Profile = () => {
    
         <Container>
              <Logo src={LogoSVG} alt="teste"/>
+             <Header>
+                <DivNome>
+                    <Nome>Saulo Esteves</Nome> <br/>
+                    <DivNomePerfil>
+                        <NomePerfil>sauloesteves</NomePerfil> 
+                        <BotaoThreads>threads.net</BotaoThreads>
+                    </DivNomePerfil>
+                </DivNome>
+
+                <DivFoto>
+                    saulo
+                </DivFoto>
+             </Header>
         </Container>
     
     )

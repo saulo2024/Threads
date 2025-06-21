@@ -1,6 +1,55 @@
 import styled, { createGlobalStyle } from "styled-components";
 
- export const GlobalStyles = createGlobalStyle `
+
+export const GlobalStyle = createGlobalStyle`
+
+  /* Regular */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Bold */
+  @font-face {
+    font-family: 'Roboto-bold';
+    src: url('../assets/fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* Italic */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto/Roboto-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* Light */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  /* Medium */
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
 body { 
     margin: 0;
     padding: 0;
@@ -14,8 +63,8 @@ body {
 export const Container = styled.div`
     display: flex;
     width: 700px;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding-top: 30px;
 `;
 
@@ -27,14 +76,50 @@ export const Logo = styled.img`
 export const Header = styled.div`
     display: flex;
     flex-direction: row;
+    width: 100%;
+    margin-top: 40px;
 `
+
+export const DivNome = styled.div`
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+`;
 
 export const DivNomePerfil = styled.div`
     display: flex;
-    flex: 1;
-`;
+    justify-content: flex-start;
+`
 
 export const DivFoto = styled.div`
     display: flex;
     flex: 1;
+    width: 100%;
 `;
+
+export const Nome = styled.h1`
+    font-size: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+`
+export const NomePerfil = styled.h2`
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+    margin-top: -18px;
+`
+
+export const BotaoThreads = styled.button`
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #3a3a3a;
+    border: 0;
+`
