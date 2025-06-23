@@ -1,5 +1,10 @@
 import styled, { createGlobalStyle } from "styled-components";
 
+type TypeTextCustomizavel = {
+  color: string;
+  size: string;
+}
+
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -144,6 +149,10 @@ export const FotoPerfil = styled.img`
 export const Biografia = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 15px;
 `
 
 export const TextoBiografia = styled.h3`
@@ -151,4 +160,31 @@ export const TextoBiografia = styled.h3`
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
+  color: #f3f5f7;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  margin-bottom: -3px;
+`
+
+export const DivSeguidores = styled.div`
+  display: flex;
+  flex-direction: row;
+  `
+
+export const DivSeguidoresLink = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 2;
+`;
+
+export const DivIconesInstagram = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+`;
+
+export const TypeTextCustomizavel = styled.div<TypeTextCustomizavel>`
+  
 `
