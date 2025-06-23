@@ -111,6 +111,7 @@ export const Nome = styled.h1`
     font-size: 25px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px
     font-weight: 500;
     text-decoration: none;
     margin: 0;
@@ -131,12 +132,12 @@ export const BotaoThreads = styled.button`
     padding: 5px 7px;
     border-radius: 15px;
     font-family: 'Roboto', sans-serif;
-    background-color: #3a3a3a;
+    background-color: #1e1e1e;
     border: 0;
     color: #616161;
     font-size: 10px;
     letter-spacing: 0.2px;
-    margin-top: -5px;
+    margin-top: -3px;
     margin-left: 5px;
 `
 
@@ -166,9 +167,11 @@ export const TextoBiografia = styled.h3`
   margin-bottom: -3px;
 `
 
-export const DivSeguidores = styled.div`
+export const ContainerSeguidoresLink = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100%;
+  margin-top: 25px;
   `
 
 export const DivSeguidoresLink = styled.div`
@@ -185,6 +188,16 @@ export const DivIconesInstagram = styled.div`
   flex: 1;
 `;
 
-export const TypeTextCustomizavel = styled.div<TypeTextCustomizavel>`
-  
+export const TypeTextCustomizavel = styled.p<TypeTextCustomizavel>`
+  border: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif ;
+  letter-spacing: 0.2;
+  color: ${(props) => (props.color ? props.color : "white")};
+  font-size: ${(props) => (props.size ? `${props.size}px` : "15 ") };
 `
+
+export const LogoInstagram = styled.img`
+  width: 100%;
+  max-width: 20px;
+`;
