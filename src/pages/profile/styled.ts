@@ -5,6 +5,10 @@ type TypeTextCustomizavel = {
   size: string;
 }
 
+type TypeIcone = {
+  width?: string;
+}
+
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -111,12 +115,12 @@ export const Nome = styled.h1`
     font-size: 25px;
     color: white;
     font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.5px
+    letter-spacing: 0.5px;
     font-weight: 500;
     text-decoration: none;
     margin: 0;
     border: 0;
-`
+`;
 export const NomePerfil = styled.h2`
     text-decoration: none;
     font-size: 14px;
@@ -185,6 +189,7 @@ export const DivIconesInstagram = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
   flex: 1;
 `;
 
@@ -197,7 +202,26 @@ export const TypeTextCustomizavel = styled.p<TypeTextCustomizavel>`
   font-size: ${(props) => (props.size ? `${props.size}px` : "15 ") };
 `
 
-export const LogoInstagram = styled.img`
+export const Icone = styled.img<TypeIcone>`
   width: 100%;
-  max-width: 20px;
+  max-width: ${(props) => props.width ? `${props.width}px` : "23px"};
+  margin-right: 15px;
+`;
+
+export const ContainerThreadsouResposta = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+export const DivThreads = styled.div`
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+`;
+
+export const Respostas = styled.div`
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
 `;

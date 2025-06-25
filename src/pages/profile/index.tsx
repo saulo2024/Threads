@@ -8,7 +8,7 @@ import { Biografia,
     DivNome,
     DivNomePerfil,
     DivSeguidoresLink,
-    LogoInstagram,
+    Icone,
     FotoPerfil,
     Header,
     Logo, 
@@ -18,6 +18,7 @@ import { Biografia,
 import LogoSVG from "../../assets/images/LogoSVG.svg";
 import Perfil from "../../assets/images/185657175.jpeg";
 import LogoInstagramSVG from "../../assets/images/instagram.svg"
+import MaisSVG from "../../assets/images/mais.svg"
 
 const Profile = () => {
     return (
@@ -51,7 +52,8 @@ const Profile = () => {
                 </DivSeguidoresLink>
 
                 <DivIconesInstagram>
-                    <LogoInstagram src={LogoInstagramSVG}></LogoInstagram>
+                    <Icone src={LogoInstagramSVG}></Icone>
+                    <Icone width="28" src={MaisSVG}></Icone>
                 </DivIconesInstagram>
             </ContainerSeguidoresLink>
         </Container>
