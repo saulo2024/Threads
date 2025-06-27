@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { Biografia, 
     BotaoThreads, 
     Container, 
@@ -13,16 +14,23 @@ import { Biografia,
     Header,
     Logo, 
     Nome, 
-    
-    NomePerfil, TextoBiografia, TypeTextCustomizavel } from "../profile/styled";
+    NomePerfil,
+    TextoBiografia, 
+    TextoCustomizavel, 
+    DivThreadsouResposta,
+    ContainerThreadsouResposta} from "../profile/styled";
 import LogoSVG from "../../assets/images/LogoSVG.svg";
 import Perfil from "../../assets/images/185657175.jpeg";
 import LogoInstagramSVG from "../../assets/images/instagram.svg"
 import MaisSVG from "../../assets/images/mais.svg"
 
 const Profile = () => {
-    return (
+    
+    const [ThreadsOuResposta, setThreadsOuResposta] = useState ("threads");
 
+    return (
+    
+    
         <Container>
             <Logo src={LogoSVG} alt="teste" />
             <Header>
@@ -46,9 +54,9 @@ const Profile = () => {
             </Biografia>
             <ContainerSeguidoresLink>
                 <DivSeguidoresLink>
-                <TypeTextCustomizavel color="#616161" size="15">
+                    <TextoCustomizavel color="#616161" size="15">
                         300000000 seguidores . descomplicandodev.com
-                    </TypeTextCustomizavel>
+                    </TextoCustomizavel>
                 </DivSeguidoresLink>
 
                 <DivIconesInstagram>
@@ -56,6 +64,19 @@ const Profile = () => {
                     <Icone width="28" src={MaisSVG}></Icone>
                 </DivIconesInstagram>
             </ContainerSeguidoresLink>
+            <ContainerThreadsouResposta>
+                <DivThreadsouResposta onClick={() => {setThreadsOuResposta ("threads")}} outlined={ThreadsOuResposta === "threads" ? "true" : "false"}>
+                    <TextoCustomizavel color="white" size="15">
+                        Threads
+                    </TextoCustomizavel>
+                </DivThreadsouResposta>
+                    
+                <DivThreadsouResposta onClick={() => {setThreadsOuResposta ("resposta")}} outlined={ThreadsOuResposta === "resposta" ? "true" : "false"}>
+                    <TextoCustomizavel color="white" size="15">
+                        Resposta
+                    </TextoCustomizavel>
+                </DivThreadsouResposta>
+            </ContainerThreadsouResposta>
         </Container>
 
     );

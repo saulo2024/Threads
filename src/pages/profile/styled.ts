@@ -9,6 +9,10 @@ type TypeIcone = {
   width?: string;
 }
 
+type TypeDivThreadsOuResposta = {
+  outlined: string;
+}
+
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -193,7 +197,7 @@ export const DivIconesInstagram = styled.div`
   flex: 1;
 `;
 
-export const TypeTextCustomizavel = styled.p<TypeTextCustomizavel>`
+export const TextoCustomizavel = styled.p<TypeTextCustomizavel>`
   border: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif ;
@@ -211,17 +215,17 @@ export const Icone = styled.img<TypeIcone>`
 export const ContainerThreadsouResposta = styled.div`
   display: flex;
   flex-direction: row;
-`;
-export const DivThreads = styled.div`
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-`;
+  width: 100%;
 
-export const Respostas = styled.div`
+`;
+export const DivThreadsouResposta = styled.div<TypeDivThreadsOuResposta>`
    display: flex;
+   flex: 1;
    flex-direction: row;
    justify-content: center;
    align-items: center;
+   padding: 12px 0px;
+   height: 30px;
+   margin-top:15px ;
+   border-bottom: ${(props) => props.outlined === "true" ? "1px solid white" : "0px"};
 `;
