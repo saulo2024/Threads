@@ -3,14 +3,20 @@ import styled, { createGlobalStyle } from "styled-components";
 type TypeTextCustomizavel = {
   color: string;
   size: string;
+  left?  : string;
 }
 
 type TypeIcone = {
   width?: string;
+  top?: string;
 }
 
 type TypeDivThreadsOuResposta = {
   outlined: string;
+}
+
+type TypeContainerThreads = {
+  display?: string;
 }
 
 
@@ -204,12 +210,14 @@ export const TextoCustomizavel = styled.p<TypeTextCustomizavel>`
   letter-spacing: 0.2;
   color: ${(props) => (props.color ? props.color : "white")};
   font-size: ${(props) => (props.size ? `${props.size}px` : "15 ") };
+  margin-left: ${(props) => props.left ? `${props.left}px` : "0px"}
 `
 
 export const Icone = styled.img<TypeIcone>`
   width: 100%;
   max-width: ${(props) => props.width ? `${props.width}px` : "23px"};
   margin-right: 15px;
+  margin-bottom: ${(props) => props.top ? `${props.top}px` : "0px"};
 `;
 
 export const ContainerThreadsouResposta = styled.div`
@@ -229,3 +237,47 @@ export const DivThreadsouResposta = styled.div<TypeDivThreadsOuResposta>`
    margin-top:15px ;
    border-bottom: ${(props) => props.outlined === "true" ? "1px solid white" : "0px"};
 `;
+
+
+export const ContainerThreads = styled.div<TypeContainerThreads>`
+  display: ${(props) => props.display ? props.display : "flex"};
+  color: white;
+  width: 100%;
+  padding-top: 30px;
+`;
+
+export const DivFotoThreadsContainer = styled.div`
+  display: flex;
+  flex: 1;
+`;
+export const FotoThreadsDiv = styled.img`
+  border-radius: 50%;
+  width: 100%;
+  max-width: 37px;
+`;
+
+export const DivPostThreadsContainer = styled.div`
+  display: flex;
+  flex: 8;
+  margin-left: -25px;
+`;
+
+export const HeaderDivPostThreadsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+`;
+
+export const PerfilThreads = styled.div`
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+`;
+
+export const TmepoPostThreads =styled.div`
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex: 1;
+`;
+

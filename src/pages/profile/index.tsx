@@ -18,12 +18,19 @@ import { Biografia,
     TextoBiografia, 
     TextoCustomizavel, 
     DivThreadsouResposta,
-    ContainerThreadsouResposta} from "../profile/styled";
+    ContainerThreadsouResposta,
+    ContainerThreads,
+    DivFotoThreadsContainer,
+    DivPostThreadsContainer,
+    FotoThreadsDiv,
+    PerfilThreads,
+    TmepoPostThreads,
+    HeaderDivPostThreadsContainer,} from "../profile/styled";
 import LogoSVG from "../../assets/images/LogoSVG.svg";
 import Perfil from "../../assets/images/185657175.jpeg";
 import LogoInstagramSVG from "../../assets/images/instagram.svg"
 import MaisSVG from "../../assets/images/mais.svg"
-
+import TrêsPontos from "../../assets/images/três.pontos.min.svg"
 const Profile = () => {
     
     const [ThreadsOuResposta, setThreadsOuResposta] = useState ("threads");
@@ -77,6 +84,29 @@ const Profile = () => {
                     </TextoCustomizavel>
                 </DivThreadsouResposta>
             </ContainerThreadsouResposta>
+
+            <ContainerThreads display={ThreadsOuResposta === "threads" ? "flex" : "none"}>
+                <DivFotoThreadsContainer>
+                    <FotoThreadsDiv src={Perfil}/>
+                </DivFotoThreadsContainer>
+
+                <DivPostThreadsContainer>
+                    <HeaderDivPostThreadsContainer>
+                        <PerfilThreads>
+                            <TextoCustomizavel size="14 " color="white">
+                                @sauloesteves
+                            </TextoCustomizavel>
+                        </PerfilThreads>
+                           
+                        <TmepoPostThreads>
+                            <TextoCustomizavel size="14" color="grey">
+                                3 sem <Icone src={TrêsPontos} top="-3" width="15"/>
+                            </TextoCustomizavel>
+                        </TmepoPostThreads>
+
+                    </HeaderDivPostThreadsContainer>
+                </DivPostThreadsContainer>
+            </ContainerThreads>
         </Container>
 
     );
