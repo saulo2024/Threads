@@ -3,12 +3,19 @@ import styled, { createGlobalStyle } from "styled-components";
 type TypeTextCustomizavel = {
   color: string;
   size: string;
-  left?  : string;
+  left?: string;
+  top?: string;
+  weight?: string;
+
 }
 
 type TypeIcone = {
   width?: string;
+  bottom?: string;
   top?: string;
+  left?: string;
+  radius?: string;
+  border?:string;
 }
 
 type TypeDivThreadsOuResposta = {
@@ -209,15 +216,22 @@ export const TextoCustomizavel = styled.p<TypeTextCustomizavel>`
   font-family: Arial, Helvetica, sans-serif ;
   letter-spacing: 0.2;
   color: ${(props) => (props.color ? props.color : "white")};
-  font-size: ${(props) => (props.size ? `${props.size}px` : "15 ") };
-  margin-left: ${(props) => props.left ? `${props.left}px` : "0px"}
+  font-size: ${(props) => (props.size ? `${props.size}px` : "15") };
+  margin-left: ${(props) => props.left ? `${props.left}px` : "0px"};
+  margin-top: ${(props) => props.top ? `${props.top}px` : "0px"};
+  font-weight: ${(props) => props.weight ? props.weight : 300};
 `
 
 export const Icone = styled.img<TypeIcone>`
   width: 100%;
   max-width: ${(props) => props.width ? `${props.width}px` : "23px"};
   margin-right: 15px;
+  border: ${(props) => props.border ? props.border : "none"};
+  margin-top: ${(props) => props.top ? `${props.top}px` : "0px"};;
+  margin-left: ${(props) => props.left ? `${props.left}px` : "0px"};
   margin-bottom: ${(props) => props.top ? `${props.top}px` : "0px"};
+  border-radius: ${(props) => props.radius ? props.radius : "0px"};
+
 `;
 
 export const ContainerThreadsouResposta = styled.div`
@@ -254,11 +268,14 @@ export const FotoThreadsDiv = styled.img`
   border-radius: 50%;
   width: 100%;
   max-width: 37px;
+  max-height: 37px;
 `;
 
 export const DivPostThreadsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   flex: 8;
+  width: 100%;
   margin-left: -25px;
 `;
 
@@ -275,9 +292,48 @@ export const PerfilThreads = styled.div`
 `;
 
 export const TmepoPostThreads =styled.div`
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+  margin-right: px;
 `;
 
+export const DivPostThreads = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const DivIconesThreads = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0px;
+  margin-top: 15px;
+`;
+
+export const ContainerDownload = styled.div`
+  margin-top: 35px;
+  background-color: black;
+  width: 100%;
+  border-radius: 15px;
+  height: 300px;
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+`;
+
+export const BotaoBaixarThreads = styled.button`
+  font-family: "Robto", sans-serif;
+  font-size: 15px;
+  color: #f3f5f7;
+  border: 1.5px solid #5d5d5d;
+  background: transparent;
+  padding: 6px 10px;
+  margin-top: 30px;
+  border-radius: 15px;
+`;
